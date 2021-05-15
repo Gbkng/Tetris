@@ -44,10 +44,10 @@ namespace tetris
       window_.setVerticalSyncEnabled(true);
       window_.setFramerateLimit(120);
 
-      // const std::filesystem::path fontpath = std::filesystem::current_path() / "../font.ttf";
-      // std::cout << "fontpath : " << fontpath << std::endl;
+      const std::filesystem::path fontpath = std::filesystem::current_path() / "font.ttf";
+      std::cout << "fontpath : " << fontpath << std::endl;
 
-      if (!font_.loadFromFile("font.ttf"))
+      if (!font_.loadFromFile(fontpath))
       {
         std::cout << "Failed to load font" << std::endl;
       }
