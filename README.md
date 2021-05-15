@@ -1,20 +1,23 @@
-# Snake
-A very disruptive game.
+# Tetris
+Another very disruptive game.
 Written in C++.
 Hope Bjarne will be proud.
 
 # How to play ?
 
-Snake is a game far from the classical AAA. It aims at focusing on the main components of what makes a gameplay enjoyable. The game design is a natural by-product of the inherent superiority of the creator's mind. 
+- Z - rotate
+- Space - drop
+- Left Arrow - left
+- Right Arrow - right
+- Down Arrow - down 
 
-Use the arrow keys to move the snake. Press escape to exit. Press space, because it's cool.
-
-If you loose, take a deep breath, and try again. Never stop.
 # LINUX : Compile and run from source
 
 The following procedure has been tested on Ubuntu 20.04.
+
 ## The very lazy way
-Just run the INSTALL.sh script, follow the instructions, be kind with this script, and enjoy your life. 
+
+Just run the INSTALL.sh script, follow the instructions, and enjoy your life. 
 To do so, from the source directory, run
 
 ```sh
@@ -25,17 +28,18 @@ This script will install dependencies, build the project, and run it. You will h
 
 To run the game again, just run 
 ```sh
-./snake
+./tetris
 ```
 from the build directory.
 
 If you want to compile the project step by step, the categories below provide more details.
+
 ## Dependencies
 
 To compile this project, some packages have to be installed on your machine.
 
 
-First, some usual packages concerning C/C++ build.
+First, install some usual packages concerning C/C++ build.
 
 ```sh
 sudo apt install gcc libstdc++6 make cmake 
@@ -47,7 +51,7 @@ The project is also based on the SFML project (Simple Fast Multimedia Library).
 
 To install the required module of this library, run
 ```sh
-sudo apt install libsfml-graphics2.5 libsfml-system2.5 libsfml-window2.5
+sudo apt install libsfml-dev libsfml-graphics2.5 libsfml-system2.5 libsfml-window2.5
 ```
 
 
@@ -59,7 +63,7 @@ mkdir build
 cd build
 ```
 
-Then, from the build directory, run cmake in Release mode, through the command
+Then, from the build directory, run cmake with Release option (this will generate a MakeFile with Release flags for the compiler), through the command
 
 ```sh
 cmake .. -DCMAKE_BUILD_TYPE=Release
@@ -67,43 +71,35 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 
 Please note that `..` is just a generic command that designates the parent directory. 
 
-The generic path to provide for cmake is the path to the source directory (i.e. where the `CMakeList.txt` file is). 
+The generic path to provide to cmake is the path to the source directory (i.e. where the `CMakeList.txt` file is). 
 
 Consequently, if the build folder has been created elsewhere, you must replace `..` with the source directory path.
 
-From the same directory which you've run the `cmake <...>` command, now run
+From the same directory you ran the `cmake <...>` command, now run
 
 ```sh
 make
 ```
 
 This command calls the compiler to properly generate the final binary. 
+
 ## Run
 
-A binary file called `snake` has been created in the build folder.
+A binary file called `tetris` has been created in the build folder.
 
 To run the game, juste run 
 ```sh
-./snake
+./tetris
 ```
 
-If it fails with a message such as `permission denied: ./snake`, you need to grant `snake` the execution permission by running :
+If it fails with a message such as `permission denied: ./tetris`, you need to grant `tetris` the execution permission by running :
 
 ```sh
-chmod +x snake
+chmod +x tetris
 ```
 
 The precedent command should now work properly.
 
-# WINDOWS : Compile from source
-
-TO DO !
-
-Still need to provide SMFL .dll extensions in this folder and ensure Windows10 automatically cope with dynamic/static linking to standard libraries libstdc++.
-
-The `mingw-w64-x86_64.cmake` is a cmake configuration file that configure cmake to cross compile this Snake project from linux to windows. It recquires the installation of mingw-gcc. 
-
-The obtained .exe file has only been tested with wine, and failed to dynamically link the .exe. Hence, this app is not cross-platform for now.
 # Notes 
 
-- The `.ttf` file is a font that is used to display the score on screen.
+- The `.ttf` file is a font that is recquired to display the score on screen.
