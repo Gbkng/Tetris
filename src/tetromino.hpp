@@ -7,9 +7,10 @@
 #include <memory>
 
 #include "map.hpp"
+#include "random_generator.hpp"
+
 namespace tetris {
 
-class RandomGenerator;
 class Tetromino : public Map<Tetromino, LogicType, 4, 4> {
 public:
   static constexpr unsigned int shapeNb = 7;
@@ -140,11 +141,10 @@ LogicType randomShape() {
       LogicType::Z,   LogicType::Square,    LogicType::T,
       // LogicType::Vince
   };
-  static RandomGenerator randomGen;
+  static RandomGenerator randomGen(shapeNb);
   const int randomShapeRk =
       randomGen.generateRandomInteger(shapeNb - 1); // range [0, shapeNb - 1]
   return shapeArray.at(randomShapeRk);
 }
 
 } // namespace tetris
-
