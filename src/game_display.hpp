@@ -3,11 +3,9 @@
 #include <filesystem>
 #include <iostream>
 
-#include "tetromino.hpp"
-#include "game.hpp"
-#include "map.hpp"
-#include "level.hpp"
 #include "SFML/Graphics.hpp"
+#include "game.hpp"
+#include "level.hpp"
 
 namespace tetris
 {

@@ -1,11 +1,10 @@
 #pragma once
 
-#include <memory>
-#include "tetromino.hpp"
-#include "logic_map.hpp"
+#include "SFML/Graphics.hpp"
 #include "game_display.hpp"
 #include "level.hpp"
-#include "SFML/Graphics.hpp"
+#include "logic_map.hpp"
+#include "tetromino.hpp"
 
 namespace tetris
 {

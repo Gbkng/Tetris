@@ -1,10 +1,10 @@
-
-#include "SFML/Graphics.hpp"
 #pragma once
 
 #include <cassert>
 #include <iostream>
 #include <memory>
+
+#include "SFML/Graphics.hpp"
 
 #include "map.hpp"
 #include "random_generator.hpp"

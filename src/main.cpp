@@ -1,9 +1,9 @@
 #include <iostream>
 
 #include "SFML/Graphics.hpp"
-#include "tetromino.hpp"
 #include "game.hpp"
 #include "game_display.hpp"
+#include "tetromino.hpp"
 
 int main()
 {

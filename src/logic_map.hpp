@@ -1,8 +1,8 @@
 #pragma once
 
 #include <cassert>
-#include <memory>
 #include <iostream>
+#include <memory>
 
 #include "SFML/Graphics.hpp"
 
