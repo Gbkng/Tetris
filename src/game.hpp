@@ -18,6 +18,7 @@ namespace tetris
     static constexpr int yDim = yDim_;
     static constexpr int x0 = xDim_ / 2;
     static constexpr int y0 = -2;
+#include <memory>
 
     static constexpr auto &levelTable = LevelTable::levelTable;
     TetrisGame() : gameDisplay_(*this), // open the window
