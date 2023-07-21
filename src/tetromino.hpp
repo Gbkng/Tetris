@@ -1,7 +1,6 @@
-#ifndef GUYTETRIS_TETROMINO_HPP_
-#define GUYTETRIS_TETROMINO_HPP_
 
 #include "SFML/Graphics.hpp"
+#pragma once
 
 #include <cassert>
 #include <iostream>
@@ -149,4 +148,3 @@ LogicType randomShape() {
 
 } // namespace tetris
 
-#endif

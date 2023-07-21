@@ -1,5 +1,4 @@
-#ifndef GUYTETRIS_GAME_HPP_
-#define GUYTETRIS_GAME_HPP_
+#pragma once
 
 #include <memory>
 #include "tetromino.hpp"
@@ -402,4 +401,3 @@ namespace tetris
     }
   };
 }
-#endif

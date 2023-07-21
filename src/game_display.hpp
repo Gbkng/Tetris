@@ -1,5 +1,4 @@
-#ifndef GUYTETRIS_GAME_DISPLAY_HPP_
-#define GUYTETRIS_GAME_DISPLAY_HPP_
+#pragma once
 
 #include <filesystem>
 #include <iostream>
@@ -205,4 +204,3 @@ namespace tetris
   };
 
 }
-#endif

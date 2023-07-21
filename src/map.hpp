@@ -1,5 +1,4 @@
-#ifndef GUYTETRIS_MAP_HPP_
-#define GUYTETRIS_MAP_HPP_
+#pragma once
 
 #include <cassert>
 #include <memory>
@@ -170,4 +169,3 @@ namespace tetris
   };
 
 }
-#endif

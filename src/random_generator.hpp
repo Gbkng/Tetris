@@ -1,5 +1,4 @@
-#ifndef GUYTETRIS_UTILS_HPP_
-#define GUYTETRIS_UTILS_HPP_
+#pragma once
 
 #include "tetromino.hpp"
 #include <random>
@@ -23,4 +22,3 @@ private:
 };
 } // namespace tetris
 
-#endif

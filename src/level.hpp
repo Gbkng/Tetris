@@ -1,5 +1,4 @@
-#ifndef GUYTETRIS_LEVEL_HPP_
-#define GUYTETRIS_LEVEL_HPP_
+#pragma once
 
 #include "SFML/Graphics.hpp"
 
@@ -22,4 +21,3 @@ namespace tetris
   };
 }
 
-#endif
