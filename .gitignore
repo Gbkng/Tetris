@@ -1,3 +1,7 @@
-**/build/**
-**/build_others/**
-settings.json
+**/*
+!CMakeLists.txt
+!INSTALL.sh
+!README.md
+!TODO.md
+!font.ttf
+!src/**/*
