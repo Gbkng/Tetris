@@ -1,23 +1,19 @@
 #pragma once
 
-#include "SFML/Graphics.hpp"
+#include <array>
 
-namespace tetris
-{
+#include "color.hpp"
 
-  struct Level
-  {
-    sf::Color backgroundColor;
-    int clockTick;
-    float scoreMultiplier;
+namespace tetris {
 
-    Level(sf::Color backgroundColor_ = sf::Color::Black,
-          int clockTick_ = 300,
-          float scoreMultiplier_ = 1.);
-  };
-  struct LevelTable
-  {
-    static const std::array<Level, 20> levelTable;
-  };
-}
+struct Level {
+  Color backgroundColor;
+  int clockTick;
+  float scoreMultiplier;
 
+  Level(Color = Color::Black, int = 300, float = 1.);
+};
+struct LevelTable {
+  static const std::array<Level, 20> levelTable;
+};
+} // namespace tetris
