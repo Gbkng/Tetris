@@ -4,5 +4,6 @@
 !README.md
 !TODO.md
 !font.ttf
+!src/
 !src/*.cpp
 !src/*.hpp
