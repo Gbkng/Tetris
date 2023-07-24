@@ -29,13 +29,15 @@ printf  "\nconfigure project with 'cmake'\n\n"
 
 set -e
 
-mkdir -p bin
+mkdir -p bin .build
 
-cmake -S . -B bin -DCMAKE_BUILD_TYPE=Release
+cmake -S . -B .build \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_INSTALL_PREFIX=.
 
 printf  "\n\nbuild project with 'make'\n\n"
 
-make -C bin
+make -C .build install
 chmod +x bin/tetris
 
 set +e

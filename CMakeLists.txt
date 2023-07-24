@@ -15,3 +15,6 @@ add_executable(
 
 target_link_libraries(tetris sfml-graphics sfml-window sfml-system)
 configure_file(font.ttf ./ COPYONLY)
+
+install(TARGETS tetris DESTINATION bin)
+install(FILES font.ttf DESTINATION bin)
