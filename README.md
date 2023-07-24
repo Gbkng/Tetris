@@ -4,11 +4,12 @@ Another very disruptive game, written in C++.
 
 # How to play ?
 
-- Z - rotate
-- Space - drop
-- Left Arrow - left
-- Right Arrow - right
-- Down Arrow - down 
+commands in parenthesis are vi-like alternatives
+- `z (k)` - rotate
+- `space` - drop
+- `LeftArrow (h)` - left
+- `RightArrow (l)` - right
+- `Down Arrow (j)` - down
 
 # LINUX : Compile and run from source
 
