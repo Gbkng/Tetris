@@ -20,12 +20,14 @@ The following procedure has been tested on Ubuntu 20.04.
 Just run the INSTALL.sh script, from the source directory:
 
 ```sh
-chmod +x INSTALL.sh; sudo ./INSTALL.sh
+chmod +x INSTALL.sh; ./INSTALL.sh
 ```
 
-This script will install dependencies, and build the project.
+This script will build the project, assuming you have the correct dependencies.
 
-To run the game again, just run 
+**WARNING** Please read the first few lines of the script if the procedure fails. They provide information about dependencies installation.
+
+To run the game, run 
 
 ```sh
 ./bin/tetris
@@ -60,20 +62,21 @@ sudo apt install libsfml-dev libsfml-graphics2.5 libsfml-system2.5 libsfml-windo
 To compile the game, you first need to create a build directory aside from the source:
 
 ```sh
-mkdir build 
+mkdir bin
 ```
 
 Then, run cmake with Release build option: 
 
 ```sh
 # from source dir
-cmake -S . -B build -D CMAKE_BUILD_TYPE=Release
+cmake -S . -B bin -D CMAKE_BUILD_TYPE=Release
 ```
+Other available build options are `Debug` and `RelWithDebInfo`
 
 Then, run make
 
 ```sh
-make -C build
+make -C bin
 ```
 
 ## Run
@@ -81,13 +84,13 @@ make -C build
 A binary file called `tetris` has been created in the build folder.
 
 ```sh
-./build/tetris
+./bin/tetris
 ```
 
 If it fails with a message such as `permission denied: ./tetris`, you need to grant `tetris` the execution permission by running :
 
 ```sh
-chmod +x tetris
+chmod +x ./bin/tetris
 ```
 
 # Notes 
